@@ -14,7 +14,7 @@ public class BenchmarKing {
             System.out.println(currentNano);
 
             mOrdenamiento = new MetodosOrdenamiento();
-            int[] arreglo = generraArregloAleatorio(100000);
+            int[] arreglo = generraArregloAleatorio(1000000000);
 
             Runnable tarea = ()-> mOrdenamiento.burbujaTradicional(arreglo);
 
@@ -29,7 +29,7 @@ public class BenchmarKing {
             int[] arreglo = new int[tamaño];
             Random random = new Random();
             for(int i = 0; i < tamaño; i++) {
-                arreglo[i] = random.nextInt(1000000000);
+                arreglo[i] = random.nextInt(10000);
             }
             return arreglo;
         }   
