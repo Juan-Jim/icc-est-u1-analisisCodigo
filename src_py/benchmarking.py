@@ -4,9 +4,22 @@ from metodos_ordenamientos import Metodo_ordenamiento
 
 
 class Benchmarking:
+
+    
     def __init__(self):
         print('Benchmarking instanciado')
+    
+    def medir_tiempo(self, funcion, arreglo):
+        inicio = time.perf_counter()
+        funcion(arreglo)
+        fin = time.perf_counter()
+        return fin - inicio
 
+
+
+
+
+    def metodo(self):
         self.mo = Metodo_ordenamiento()
 
         arreglo = self.build_arreglo(10000)
